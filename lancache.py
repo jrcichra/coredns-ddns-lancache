@@ -4,7 +4,6 @@
 
 import socket
 import logging
-import pymysql
 import os
 import argparse
 import glob
