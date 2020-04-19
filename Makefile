@@ -7,7 +7,7 @@ stop:
 start:
 	docker start coredns
 new:
-	docker run --name=coredns -v /home/pi/coredns:/root/ --expose=53 -p 53:53/udp --restart=always --detach=true coredns/coredns -conf /root/Corefile
+	docker run --name=coredns -v ${PWD}:/root/ --expose=53 -p 53:53/udp --restart=always --detach=true coredns/coredns -conf /root/Corefile
 rm:
 	docker stop coredns && docker rm coredns
 logs:
